@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; background-color: #00BFFF;
+    }
+
+    header {
+        background-color: darkblue;
+    }
+
+    a {
+        color: #00B7FF;
+    }
+</style>
+<body>
+<header>
+    <h1 style="color: white;text-align:center">Recommendations</h1>
+</header>
+<div class="container" style="cursor: pointer">
+    <ul class="list-group">
+        <% results.forEach(function (item,i) { %>
+        <li id="r1" class="list-group-item"><h2>Recommendation <%= i + 1%></h2><%- item._source.content%></li>
+        <% })%>
+    </ul>
+</div>
+</body>
+</html>
